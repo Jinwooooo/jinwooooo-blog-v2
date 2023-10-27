@@ -4,7 +4,7 @@ import { AiFillCodeSandboxCircle } from "react-icons/ai"
 import styled from "@emotion/styled"
 import { Emoji } from "src/components/Emoji"
 
-const ServiceCard: React.FC = () => return null
+const ServiceCard: React.FC = () => { return null }
 // {
 //   if (!CONFIG.projects) return null
 //   return (
