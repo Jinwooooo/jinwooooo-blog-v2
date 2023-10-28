@@ -4,7 +4,7 @@ const CONFIG = {
     name: "Jinwoooo",
     image: "/jinwooooo_notion_avatar_231016.svg",
     role: "Doodler",
-    bio: "Interested in CS, non-fiction Books, Lost Ark, Tennis",
+    bio: "Interests:  CS, Books, Lost Ark, Tennis",
     email: "chungjinwoo5d@naver.com",
     linkedin: "",
     github: "Jinwooooo",
@@ -23,8 +23,8 @@ const CONFIG = {
   },
 
   // CONFIG configration (required)
-  link: "https://morethan-log.vercel.app",
-  since: 2022, // If leave this empty, current year will be used.
+  link: "https://jinwooooo-blog.vercel.app/",
+  since: 2023, // If leave this empty, current year will be used.
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
 
