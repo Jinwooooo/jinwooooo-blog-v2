@@ -19,6 +19,13 @@ const PostDetail: React.FC<Props> = () => {
   return (
     <StyledWrapper>
       <article>
+        // [test: adding footer in top]
+        {data.type[0] === "Post" && (
+          <>
+            <Footer />
+          </>
+        )}
+        // [test: adding footer in top]
         {category && (
           <div css={{ marginBottom: "0.5rem" }}>
             <Category readOnly={data.status?.[0] === "PublicOnDetail"}>
