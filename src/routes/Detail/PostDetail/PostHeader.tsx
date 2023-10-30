@@ -48,17 +48,16 @@ const PostHeader: React.FC<Props> = ({ data }) => {
               </div>
             )}
           </div>
-          // [test] removing thumbnail photo within the post
-          // {data.thumbnail && (
-          //   <div className="thumbnail">
-          //     <Image
-          //       src={data.thumbnail}
-          //       css={{ objectFit: "cover" }}
-          //       fill
-          //       alt={data.title}
-          //     />
-          //   </div>
-          // )}
+          {data.thumbnail && (
+            <div className="thumbnail">
+              <Image
+                src={data.thumbnail}
+                css={{ objectFit: "cover" }}
+                fill
+                alt={data.title}
+              />
+            </div>
+          )}
         </nav>
       )}
     </StyledWrapper>

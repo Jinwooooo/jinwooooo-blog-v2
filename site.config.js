@@ -4,7 +4,7 @@ const CONFIG = {
     name: "Jinwoooo",
     image: "/jinwooooo_notion_avatar_231016.svg",
     role: "Doodler",
-    bio: "Interests:  CS, Books, Lost Ark, Tennis, Cooking",
+    bio: "Interests:  CS, Books, Lost Ark, Tennis",
     email: "chungjinwoo5d@naver.com",
     linkedin: "",
     github: "Jinwooooo",
