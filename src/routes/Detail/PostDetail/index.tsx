@@ -1,4 +1,5 @@
 import React from "react"
+import HeadBack from "./PostHeadBack"
 import PostHeader from "./PostHeader"
 import Footer from "./PostFooter"
 import CommentBox from "./CommentBox"
@@ -21,8 +22,7 @@ const PostDetail: React.FC<Props> = () => {
       <article>
         {data.type[0] === "Post" && (
           <>
-            <Footer />
-            <CommentBox data={data} />
+            <HeadBack />
           </>
         )}
         {category && (
