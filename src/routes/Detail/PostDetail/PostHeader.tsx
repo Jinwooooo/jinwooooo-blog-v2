@@ -34,9 +34,13 @@ const PostHeader: React.FC<Props> = ({ data }) => {
             )}
             <div className="date">
               {formatDate(
+<<<<<<< HEAD
                 data?.date?.start_date || "",
+=======
+                data?.date?.start_date || data.createdTime,
+>>>>>>> parent of 576dc29 (removed createdTime and [test] inserted toLocalString to show only Month and Year)
                 CONFIG.lang
-              )} // data.createdTime
+              )}
             </div>
           </div>
           <div className="mid">
