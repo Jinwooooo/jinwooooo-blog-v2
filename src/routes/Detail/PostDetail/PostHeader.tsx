@@ -34,7 +34,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
             )}
             <div className="date">
               {formatDate(
-                data?.date?.start_date.toLocaleString('en-us',{year:'numeric', month:'short'}) || "",
+                data?.date?.(start_date.slice(0,3) + " " + start_date.slice(-4)) || "",
                 CONFIG.lang
               )} // data.createdTime
             </div>
