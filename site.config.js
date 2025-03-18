@@ -2,7 +2,7 @@ const CONFIG = {
   // profile setting (required)
   profile: {
     name: "Jinwoooo",
-    image: "/jinwooooo_notion_avatar_231016.svg",
+    image: "/jinwooooo_notion_avatar_231016.png",
     role: "Doodler",
     bio: "Interests:  CS, Books, Lost Ark, Tennis",
     email: "chungjinwoo5d@naver.com",
