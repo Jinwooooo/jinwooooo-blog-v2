@@ -11,15 +11,15 @@ const useMermaidEffect = () => {
       document.getElementsByClassName("language-mermaid")
     if (!elements) return
 
-    for (let i = 0; i < elements.length; i++) {
-      mermaid.render(
-        "mermaid" + i,
-        elements[i].textContent || "",
-        (svgCode: string) => {
-          elements[i].innerHTML = svgCode
-        }
-      )
+    const renderDiagrams = async () => {
+      for (let i = 0; i < elements.length; i++) {
+        const graphDefinition = elements[i].textContent || ""
+        const { svg } = await mermaid.render("mermaid" + i, graphDefinition)
+        elements[i].innerHTML = svg
+      }
     }
+    
+    renderDiagrams()
   }, [])
 
   return
