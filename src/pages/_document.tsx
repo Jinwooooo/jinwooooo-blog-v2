@@ -6,7 +6,7 @@ class MyDocument extends Document {
     return (
       <Html lang={CONFIG.lang}>
         <Head>
-          <link rel="icon" href="/jinwooooo_notion_avatar_231016.ico" />
+          <link rel="icon" href="/developer.ico" />
           <link
             rel="jinwooooo_notion_avatar_231016"
             sizes="192x192"

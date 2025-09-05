@@ -2,13 +2,13 @@ const CONFIG = {
   // profile setting (required)
   profile: {
     name: "Jinwoooo",
-    image: "/jinwooooo_notion_avatar_231016.svg",
-    role: "Doodler",
-    bio: "Interests:  CS, Books, Lost Ark, Tennis",
+    image: "/jinwooooo_notion_avatar_231016.png",
+    role: "Software Engineer",
+    bio: "Interests:  Software, Books, Tennis",
     email: "chungjinwoo5d@naver.com",
-    linkedin: "",
+    linkedin: "jinwoo-chung-739b60366",
     github: "Jinwooooo",
-    instagram: "",
+    instagram: "jinwoo5d",
   },
   projects: [
     {
