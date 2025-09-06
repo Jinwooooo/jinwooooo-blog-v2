@@ -4,8 +4,8 @@ const CONFIG = {
     name: "Jinwoooo",
     image: "/jinwooooo_notion_avatar_231016.png",
     role: "Software Engineer",
-    bio: "Interests:  Software, Books, Tennis",
-    email: "chungjinwoo5d@naver.com",
+    bio: "Software, Books, Tennis",
+    email: "chungjinwoo5d@gmail.com",
     linkedin: "jinwoo-chung-739b60366",
     github: "Jinwooooo",
     instagram: "jinwoo5d",
@@ -19,7 +19,7 @@ const CONFIG = {
   // blog setting (required)
   blog: {
     title: "Jinwooooo Blog",
-    description: "Doodles",
+    description: "If you are not willing to be a fool, you can't become a master.",
   },
 
   // CONFIG configration (required)
