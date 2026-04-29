@@ -22,6 +22,29 @@ const text = (rich: any[] | undefined) =>
 const fileUrl = (file: any) =>
   file?.file?.url ?? file?.external?.url ?? undefined
 
+// Notion's official API returns time-limited signed S3 URLs for uploaded files.
+// They expire ~1h after issue, so static builds break. Route them through
+// Notion's own image proxy, which re-signs the underlying URL per request.
+// www.notion.so is already in next.config.js remotePatterns.
+const proxyNotionImage = (originalUrl: string, pageId: string): string => {
+  let cleanUrl = originalUrl
+  try {
+    const u = new URL(originalUrl)
+    if (u.searchParams.has("X-Amz-Signature")) {
+      cleanUrl = u.origin + u.pathname
+    }
+  } catch {
+    return originalUrl
+  }
+  const proxy = new URL(
+    `https://www.notion.so/image/${encodeURIComponent(cleanUrl)}`
+  )
+  proxy.searchParams.set("table", "block")
+  proxy.searchParams.set("id", pageId)
+  proxy.searchParams.set("cache", "v2")
+  return proxy.toString()
+}
+
 const stripUndefined = <T extends object>(obj: T): T => {
   const out: any = {}
   for (const [k, v] of Object.entries(obj)) {
@@ -43,7 +66,10 @@ const mapPage = (page: any): TPost => {
   const statusName = props.status?.select?.name as TPost["status"][number] | undefined
   const categoryName = props.category?.select?.name
   const tags = (props.tags?.multi_select ?? []).map((t: any) => t.name)
-  const thumbnail = fileUrl(props.thumbnail?.files?.[0])
+  const thumbnailRaw = fileUrl(props.thumbnail?.files?.[0])
+  const thumbnail = thumbnailRaw
+    ? proxyNotionImage(thumbnailRaw, page.id)
+    : undefined
   const author = (props.author?.people ?? []).map((u: any) =>
     stripUndefined({
       id: u.id,
