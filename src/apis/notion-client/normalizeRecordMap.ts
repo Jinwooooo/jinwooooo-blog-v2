@@ -22,5 +22,8 @@ export const normalizeRecordMap = (response: ExtendedRecordMap) => {
   response.collection = normalizeRecord(
     response.collection
   ) as typeof response.collection
+  response.collection_view = normalizeRecord(
+    response.collection_view
+  ) as typeof response.collection_view
   return response
 }
